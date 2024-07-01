@@ -1,0 +1,37 @@
+.topBox{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    h1{
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+    .card{ 
+        display: flex;
+        padding: 2px;
+        align-items: center;
+        justify-content: space-between;
+
+        .text{
+            display: flex;
+            flex-direction: column;
+
+            .username{
+                font-size: 14px;
+                font-weight: 500;
+            }
+            .email{
+                font-size: 12px;
+            }
+        }
+        img{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        } 
+        .amount{
+            font-weight: 500;
+        }   
+    }
+}

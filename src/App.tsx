@@ -9,6 +9,8 @@ import Products from "./pages/products/Products";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Menu from "./components/menu/Menu";
+import Login from "./pages/login/Login";
+import "./styles/global.scss"
 
 function App() {
 
@@ -20,7 +22,7 @@ function App() {
           <div className="menuContainer">
             <Menu/>
           </div>
-          <div className="contentContainer">
+                 <div className="contentContainer">
             <Outlet/>
           </div>
         </div>
@@ -32,8 +34,26 @@ function App() {
   const router = createBrowserRouter([
     {
       path:'/',
-      element:<Layout/>
+      element:<Layout/>,
+      children:[
+        {
+          path:'/',
+          element:<Home/>
+        },
+        {
+          path:'users',
+          element:<Users/>
+        },
+        {
+          path:'products',
+          element:<Products/>
+        },
+      ]
     },
+    {
+      path:'/login',
+      element:<Login/>
+    }
   ]);
   
 
