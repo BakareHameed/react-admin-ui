@@ -1,15 +1,17 @@
 import ChartBox from '../../components/chartBox/ChartBox'
+import PieChartBox from '../../components/piechart/PieChartBox'
 import TopBox from '../../components/topbox/TopBox'
+import { chartBoxConversion, chartBoxProduct, chartBoxRevenue, chartBoxUser } from '../../dats'
 import './home.scss'
 const Home = () => {
   return (
     <div className='home'>
       <div className="box box1"><TopBox/></div>
-      <div className="box box2"><ChartBox/></div>
-      <div className="box box3">box3</div>
-      <div className="box box4">box4</div>
-      <div className="box box5">box5</div>
-      <div className="box box6">box6</div>
+      <div className="box box2"><ChartBox  {...chartBoxUser}/></div>
+      <div className="box box3"><ChartBox {...chartBoxRevenue}/></div>
+      <div className="box box4"><PieChartBox/></div>
+      <div className="box box5"><ChartBox {...chartBoxProduct}/></div>
+      <div className="box box6"><ChartBox {...chartBoxConversion}/></div>
       <div className="box box7">box7</div>
       <div className="box box8">box8</div>
       <div className="box box9">box9</div>
