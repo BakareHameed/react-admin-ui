@@ -52,7 +52,6 @@ const BigChartBox = () => {
         <h1>Revenue Analytics</h1>
         <div className="chart">
         <ResponsiveContainer width="99%" height="100%">
-            <Tooltip contentStyle={{background: 'none'}} />
         <AreaChart
           data={data}
           margin={{
@@ -62,7 +61,6 @@ const BigChartBox = () => {
             bottom: 0,
           }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
