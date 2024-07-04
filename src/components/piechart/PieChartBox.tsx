@@ -10,7 +10,7 @@ const data = [
 ]
 const PieChartBox = () => {
   return (
-    <div className="piechart">
+    <div className="piechart"> 
         <h1>Leads by source</h1>
         <div className='chart'>
 
@@ -21,8 +21,8 @@ const PieChartBox = () => {
           />
         <Pie
           data={data}
-          innerRadius="70%"
-          outerRadius="90%"
+          innerRadius={"70%"}
+          outerRadius={"90%"}
           paddingAngle={5}
           dataKey="value"
         >
